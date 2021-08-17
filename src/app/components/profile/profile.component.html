@@ -1,0 +1,46 @@
+<div *ngIf="showProfile()" class="profile-container" [ngClass]="{ 'profile-mobile': index !== 0 }"
+  [ngStyle]="{ 'background-color': color }">
+  <div class="profile-image-container">
+    <div class="profile-circle">
+      <img src="{{ profileInfo.results[0].picture.medium }}" alt="User profile image" width="124" height="124" />
+    </div>
+    <!-- <div class="user_photo horizontal_center" id="user_photo">
+      <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+    </div> -->
+  </div>
+
+  <div class="profile-info-container">
+    <div class="profile-info">
+      <span tabindex="0" aria-label="Name" class="title-text">Name </span>
+      <span style="align-self:center">
+        {{ profileInfo.results[0].name.first }}
+        {{ profileInfo.results[0].name.last }}
+      </span>
+    </div>
+    <div class="profile-info">
+      <span tabindex="0" aria-label="Email" class="title-text "> Email </span>
+      <span style="align-self:center">
+        {{ profileInfo.results[0].email }}
+      </span>
+    </div>
+    <div class="profile-info">
+      <span tabindex="0" aria-label="Phone Number" class="title-text">Phone Number </span>
+      <span style="align-self:center">
+        {{ profileInfo.results[0].phone }}
+      </span>
+    </div>
+    <div class="profile-info">
+      <span tabindex="0" aria-label="Location" class="title-text"> Location </span>
+      <span style="align-self:center">
+        {{ profileInfo.results[0].location.city }}
+      </span>
+    </div>
+  </div>
+  <div class="buttons-container">
+    <button aria-label="edit profile" type="button" class="profile-button" [ngStyle]="{ 'background-color': color }"
+      aria-label="Edit profile">
+      <i class="icon-pdf"></i>
+      <div class="margin-left-x-small">Edit</div>
+    </button>
+  </div>
+</div>

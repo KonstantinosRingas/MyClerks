@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Code 
+
+In this App I created 2 components and 1 service.
+
+MainApp Component: This component is used like an outer container in order to house the profiles fetched. In this particular component we have the logic behind the color background changes as well as the carousel for the profiles. In Mobile version we choose to simply fetch one profile at the time in order to eliminate the endless scrolling.
+
+Profile Component: This component is used to display the variables for individual's profile. In order to have a smoother ui/ux we have predeterminded the height of each variable cell so we can ensure that the profiles all share the same height. In addition we added a Edit button which now is a dummy. 
+
+In both components we have solved the accessibility issues at least for tab navigation.
+
+The HttpService allows us to fetch the profiles from the API.

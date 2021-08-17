@@ -1,0 +1,100 @@
+.profile-circle {
+  width: 128px;
+  height: 128px;
+  min-width: 128px;
+  min-height: 128px;
+  line-height: 128px;
+  border: 2px solid #00b0ba;
+  border-radius: 50%;
+  position: relative;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+.profile-circle img {
+  width: 124px;
+  border-radius: 50%;
+  margin-left: -5px;
+  margin-top: -15px;
+}
+.profile-container {
+  border: 2px solid black;
+  padding: 32px 16px;
+  border-radius: 16px;
+  margin: 0 16px;
+  max-width: 360px;
+  width: 360px;
+
+}
+.profile-mobile {
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+}
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+}
+.profile-info-container {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile-info {
+  display: flex;
+  width: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  background-color: #00b0ba;
+  height:48px;
+  padding: 8px 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  word-break: break-word;
+  align-self:center;
+}
+.title-text {
+  font-weight: 500;
+  flex-basis: 35%;
+  align-self:center;
+  @media screen and (max-width: 720px) {
+    flex-basis: 50%;
+  }
+}
+.profile-button {
+  background: white;
+  box-shadow: 1px 1px 0 0;
+  font-weight: 500;
+  border-radius: 100px;
+  border: 2px solid #00b0ba;
+  font-size: 14px;
+  color: #00b0ba;
+  padding: 2px 16px;
+
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 124px;
+  height: 40px;
+}
+.buttons-container {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+.user-_photo {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.horizontal-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,36 @@
+<p class="header">My Clerks</p>
+<div class="main-container">
+  <div class="change-color-container">
+    <p class="change-color-text">Card background color:</p>
+    <select
+      (change)="onChange($event)"
+      [ngStyle]="{ 'background-color': selectedColor }"
+    >
+      <option
+        *ngFor="let color of colors"
+        [value]="color.value"
+        [ngStyle]="{ 'background-color': color.value }"
+      >
+        {{ color.name }}
+      </option>
+    </select>
+  </div>
+  <div class="profiles-container">
+    <button
+      (click)="toggleNext(true)"
+      class="button-expand icon-container-arrow icon-left"
+      aria-label="previous profile"
+    ></button>
+    <app-profile
+      *ngFor="let profile of profiles; let i = index"
+      [profileInfo]="profile"
+      [color]="selectedColor"
+      [index]="i"
+    ></app-profile>
+    <button
+      (click)="toggleNext(false)"
+      class="button-expand icon-container-arrow icon-right"
+      aria-label="next profile"
+    ></button>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+.header {
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: 32px;
+  text-align: center;
+  margin-bottom: 16px;
+  @media screen and (max-width: 720px) {
+    margin-left:32px;
+  }
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+.change-color-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  @media screen and (max-width: 720px) {
+    margin-left:56px;
+  }
+}
+.change-color-text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-right: 16px;
+}
+.change-color-select {
+  width: 196px;
+}
+.profiles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 48px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 720px) {
+    padding: 0;
+  }
+}
+.button-expand {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: rgba(28, 138, 153, 0.25);
+    border-radius: 0.125rem;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: rgba(28, 138, 153, 0.25);
+    border-radius: 0.125rem;
+  }
+}
+.icon-right {
+  background: url("../../../../content/arrow-pointing-to-right.svg");
+}
+.icon-left {
+  background: url("../../../../content/arrow-pointing-to-left.svg");
+}
+.icon-container-arrow {
+  min-width: 32px;
+  min-height: 32px;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
