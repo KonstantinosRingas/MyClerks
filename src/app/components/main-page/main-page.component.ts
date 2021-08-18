@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./main-page.component.less'],
 })
 export class MainPageComponent implements OnInit {
-  constructor(private httpService: HttpService) {}
+  constructor(private httpService: HttpService) { }
   ngOnInit(): void {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 100; i++) {
       this.httpService.sendGetRequest().subscribe((responseBody) => {
         this.profiles.push(responseBody);
       });
