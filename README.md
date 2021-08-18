@@ -37,3 +37,5 @@ Profile Component: This component is used to display the variables for individua
 In both components we have solved the accessibility issues at least for tab navigation.
 
 The HttpService allows us to fetch the profiles from the API.
+
+Use npm install then ng run serve
