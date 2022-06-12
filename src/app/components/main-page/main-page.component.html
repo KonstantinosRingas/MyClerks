@@ -15,8 +15,31 @@
       </option>
     </select>
   </div>
+  <div class="buttons-container" style="margin-top: 0; margin-bottom: 32px">
+    <button
+      *ngIf="hasFavourites"
+      aria-label="show Favourites images"
+      type="button"
+      class="profile-button"
+      style="margin-right: 16px"
+      [ngStyle]="{ 'background-color': selectedColor }"
+      (click)="showFavourites()"
+    >
+      <div class="margin-left-x-small">Show Favourites!</div>
+    </button>
+    <button
+      aria-label="refresh new pictures"
+      type="button"
+      class="profile-button"
+      [ngStyle]="{ 'background-color': selectedColor }"
+      (click)="refresh()"
+    >
+      <div class="margin-left-x-small">More Cute Dogs!</div>
+    </button>
+  </div>
   <div class="profiles-container">
     <button
+      *ngIf="this.profiles.length > 3"
       (click)="toggleNext(true)"
       class="button-expand icon-container-arrow icon-left"
       aria-label="previous profile"
@@ -26,11 +49,37 @@
       [profileInfo]="profile"
       [color]="selectedColor"
       [index]="i"
+      [showfav]="showfav"
+      (emitEnableButton)="enableButton()"
     ></app-profile>
     <button
+      *ngIf="this.profiles.length > 3"
       (click)="toggleNext(false)"
       class="button-expand icon-container-arrow icon-right"
       aria-label="next profile"
     ></button>
   </div>
+</div>
+<div class="buttons-container-mobile">
+  <button
+    aria-label="show Favourites images"
+    type="button"
+    class="profile-button"
+    style="margin-right: 16px"
+    [ngStyle]="{ 'background-color': selectedColor }"
+    *ngIf="this.profiles.length > 3"
+    (click)="toggleNext(true)"
+  >
+    <div class="margin-left-x-small">Show Previous</div>
+  </button>
+  <button
+    aria-label="refresh new pictures"
+    type="button"
+    class="profile-button"
+    [ngStyle]="{ 'background-color': selectedColor }"
+    *ngIf="this.profiles.length > 3"
+    (click)="toggleNext(false)"
+  >
+    <div class="margin-left-x-small">Show Next</div>
+  </button>
 </div>

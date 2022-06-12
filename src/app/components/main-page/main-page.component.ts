@@ -1,16 +1,49 @@
 import { Component, OnInit } from '@angular/core';
-import { Profile } from '../profile/profile';
 import { HttpService } from '../../http.service';
-import { Observable } from 'rxjs';
+import { FavouritesService } from 'src/app/favourites.service';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.less'],
 })
 export class MainPageComponent implements OnInit {
-  constructor(private httpService: HttpService) { }
+  constructor(
+    private httpService: HttpService,
+    public favourites: FavouritesService
+  ) {}
   ngOnInit(): void {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 5; i++) {
+      this.httpService.sendGetRequest().subscribe((responseBody) => {
+        this.profiles.push(responseBody);
+      });
+      console.log(this.profiles[i]);
+    }
+  }
+  hasFavourites: boolean = false;
+  favouritesImages: any[] = [];
+  showfav: boolean = true;
+
+  enableButton() {
+    if (this.favourites.favourites.length > 0) {
+      this.hasFavourites = true;
+    } else {
+      this.refresh();
+      this.hasFavourites = false;
+    }
+    this.favouritesImages = this.favourites.favourites;
+    if (!this.showfav) {
+      this.profiles = this.favourites.favourites;
+    }
+  }
+
+  showFavourites(): void {
+    this.profiles = this.favouritesImages;
+    this.showfav = false;
+  }
+  refresh(): void {
+    this.profiles = [];
+    this.showfav = true;
+    for (let i = 0; i < 5; i++) {
       this.httpService.sendGetRequest().subscribe((responseBody) => {
         this.profiles.push(responseBody);
       });

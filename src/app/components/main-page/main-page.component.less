@@ -82,3 +82,33 @@
   background-position: center;
   background-size: cover;
 }
+.profile-button {
+  background: white;
+  box-shadow: 1px 1px 0 0;
+  font-weight: 500;
+  border-radius: 100px;
+  border: 2px solid #00b0ba;
+  font-size: 14px;
+  color: #00b0ba;
+  padding: 2px 16px;
+
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 124px;
+  height: 40px;
+}
+.buttons-container {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+.buttons-container-mobile {
+  display:none;
+  @media screen and (max-width: 720px) {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+}

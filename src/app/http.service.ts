@@ -8,7 +8,7 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class HttpService {
   constructor(private httpClient: HttpClient) {}
-  apiUrl = 'https://randomuser.me/api/?inc=name,location,email,phone,picture';
+  apiUrl = 'https://dog.ceo/api/breeds/image/random';
   sendGetRequest() {
     return this.httpClient.get(this.apiUrl).pipe(catchError(this.handleError));
   }

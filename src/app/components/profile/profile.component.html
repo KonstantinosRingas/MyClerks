@@ -1,12 +1,21 @@
-<div *ngIf="showProfile()" class="profile-container" [ngClass]="{ 'profile-mobile': index !== 0 }"
-  [ngStyle]="{ 'background-color': color }">
+<div
+  *ngIf="showProfile()"
+  class="profile-container"
+  [ngClass]="{ 'profile-mobile': index !== 0 }"
+  [ngStyle]="{ 'background-color': color }"
+>
   <div class="profile-image-container">
     <div class="profile-circle">
-      <img src="{{ profileInfo.results[0].picture.large }}" alt="User profile image" width="124" height="124" />
+      <img
+        src="{{ profileInfo.message }}"
+        alt="image"
+        width="100%"
+        height="100%"
+      />
     </div>
   </div>
 
-  <div class="profile-info-container">
+  <!-- <div class="profile-info-container">
     <div class="profile-info">
       <span tabindex="0" aria-label="Name" class="title-text">Name </span>
       <span style="align-self:center">
@@ -32,12 +41,26 @@
         {{ profileInfo.results[0].location.city }}
       </span>
     </div>
-  </div>
+  </div> -->
   <div class="buttons-container">
-    <button aria-label="edit profile" type="button" class="profile-button" [ngStyle]="{ 'background-color': color }"
-      aria-label="Edit profile">
-      <i class="icon-pdf"></i>
-      <div class="margin-left-x-small">Edit</div>
+    <button
+      *ngIf="showfav"
+      aria-label="Add to Favourites"
+      type="button"
+      class="profile-button"
+      [ngStyle]="{ 'background-color': color }"
+      (click)="favourite()"
+    >
+      <div class="margin-left-x-small">Favourite!</div>
+    </button>
+    <button
+      *ngIf="!showfav"
+      aria-label="Remove from Favourites"
+      type="button"
+      class="profile-button-sorry"
+      (click)="remove()"
+    >
+      <div class="margin-left-x-small">Sorry Buddy</div>
     </button>
   </div>
 </div>
