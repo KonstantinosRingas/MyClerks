@@ -1,6 +1,9 @@
-<p class="header">My Clerks</p>
+<p class="header">Cute Dog Inc.</p>
 <div class="main-container">
-  <div class="change-color-container">
+  <div
+    class="change-color-container"
+    [ngStyle]="{ 'background-color': selectedColor }"
+  >
     <p class="change-color-text">Card background color:</p>
     <select
       (change)="onChange($event)"
