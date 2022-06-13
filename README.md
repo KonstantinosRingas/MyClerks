@@ -30,9 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 In this App I created 2 components and 1 service.
 
-MainApp Component: This component is used like an outer container in order to house the profiles fetched. In this particular component we have the logic behind the color background changes as well as the carousel for the profiles. In Mobile version we choose to simply fetch one profile at the time in order to eliminate the endless scrolling.
+MainApp Component: This component is used like an outer container in order to house the profiles/images fetched. In this particular component we have the logic behind the color background changes as well as the carousel for the profiles. In Mobile version we choose to simply fetch one profile at the time in order to eliminate the endless scrolling.The application also has 2 buttons, Favourites and Refresh in order to change the view to favourites or refresh the 5 images that will show.If someone is on the Favourties view and chooses to remove all the favourites then by default the page will refresh with 5 pictures of random dogs.
 
-Profile Component: This component is used to display the variables for individual's profile. In order to have a smoother ui/ux we have predeterminded the height of each variable cell so we can ensure that the profiles all share the same height. In addition we added a Edit button which now is a dummy. 
+Profile Component: This component is used to display the variables for individual's profile-pet-image. In order to have a smoother ui/ux we have predeterminded the height of each variable cell so we can ensure that the profiles all share the same height. In addition we added a favourite button which stores the profile/image in your local storage and via the Favourites button can show you all the profiles that have been saved. 
 
 In both components we have solved the accessibility issues at least for tab navigation.
 
