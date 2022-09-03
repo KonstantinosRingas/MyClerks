@@ -13,8 +13,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 6
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
 body {
-  background-image:url(../content/paw-background.jpeg);
+  background-image: url(../content/clouds-blur-bg.jpg);
+
   @media screen and (max-width: 720px) {
     max-width: 720px;
     overflow-x: hidden;
@@ -78,6 +80,7 @@ b,
 strong {
   font-weight: 600; // Add the correct font weight in Chrome, Edge, and Safari
 }
+
 // stylelint-enable font-weight-notation
 
 small {
@@ -100,6 +103,7 @@ sup {
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
@@ -126,6 +130,7 @@ samp {
   font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
   font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }
+
 // stylelint-enable font-family-no-duplicate-names
 
 pre {
@@ -249,7 +254,8 @@ select {
 //    controls in Android 4.
 // 2. Correct the inability to style clickable types in iOS and Safari.
 button,
-html [type="button"], // 1
+html [type="button"],
+// 1
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; // 2

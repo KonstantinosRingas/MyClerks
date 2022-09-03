@@ -6,10 +6,12 @@
   border: 2px solid #00b0ba;
   margin-bottom: 30px;
 }
+
 .profile-circle img {
   width: 100%;
 
 }
+
 .profile-container {
   border: 2px solid black;
   padding: 32px 16px;
@@ -19,21 +21,25 @@
   width: 360px;
 
 }
+
 .profile-mobile {
   @media screen and (max-width: 720px) {
     display: none;
   }
 }
+
 .profile-image-container {
   display: flex;
   justify-content: center;
 }
+
 .profile-info-container {
   margin-top: 32px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
+
 .profile-info {
   display: flex;
   width: 100%;
@@ -41,21 +47,24 @@
   line-height: 18px;
   font-weight: 700;
   background-color: #00b0ba;
-  height:48px;
+  height: 48px;
   padding: 8px 12px;
   margin-top: 16px;
   margin-bottom: 16px;
   word-break: break-word;
-  align-self:center;
+  align-self: center;
 }
+
 .title-text {
   font-weight: 500;
   flex-basis: 35%;
-  align-self:center;
+  align-self: center;
+
   @media screen and (max-width: 720px) {
     flex-basis: 50%;
   }
 }
+
 .profile-button {
   background-color: white;
   box-shadow: 1px 1px 0 0;
@@ -72,27 +81,30 @@
   min-width: 124px;
   height: 40px;
 }
+
 .profile-button-sorry {
   background-color: white;
   box-shadow: 1px 1px 0 0;
   font-weight: 500;
   border-radius: 100px;
-  border: 2px solid #990000 ;
+  border: 2px solid #990000;
   font-size: 14px;
-  color: #990000 ;
+  color: #990000;
   padding: 2px 16px;
-  
+
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
   min-width: 124px;
   height: 40px;
 }
+
 .buttons-container {
   margin-top: 48px;
   display: flex;
   justify-content: center;
 }
+
 .user-_photo {
   position: relative;
   background: #fff;
@@ -103,8 +115,103 @@
   margin-bottom: 30px;
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
+
 .horizontal-center {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.media-container {
+  width: 580px;
+  overflow-y: auto;
+
+  @media screen and (max-width: 720px) {
+    width: 240px;
+
+
+  }
+}
+
+.media-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    align-items: center;
+    display: flex;
+    min-height: 64px;
+    padding: 16px 0;
+    border-bottom: 1px solid fade(#144239, 10%);
+    border: 1px solid #144239;
+    padding: 16px;
+    background-color: black;
+
+    &:after {
+      content: "";
+      min-height: inherit;
+      font-size: 0;
+    }
+  }
+}
+
+.media-column {
+  background-size: contain;
+  width: 60%;
+  height: 64px;
+  background-repeat: no-repeat;
+
+}
+
+.media-button {
+  cursor: pointer;
+  border-radius: 16px;
+  height: 32px;
+  width: 20%;
+  margin: 0 16px 0 auto;
+  border: 1px solid #144239;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  background-color: #144239;
+
+  /* unvisited link */
+  a:link {
+    color: black;
+  }
+
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+
+  /* selected link */
+  a:active {
+    color: white;
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 40%
+  }
+}
+
+.icon-spotify {
+  background-image: url(../../../../content/spotify.jpg);
+}
+
+.icon-deezer {
+  background-image: url(../../../../content/deezer.jpg);
+}
+
+.icon-youtube {
+  background-image: url(../../../../content/youtube.jpg);
+}
+
+.icon-apple-music {
+  background-image: url(../../../../content/apple-music.jpg);
 }
