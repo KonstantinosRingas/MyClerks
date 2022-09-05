@@ -1,17 +1,18 @@
-<div class="main-container">
-  <div class="useful-links-container">
-    <div class="social-links-container">
-      <a [attr.href]="socialLinks[0].url" aria-label=" facebook" target="_blank" class="icon-container"
-        ngClass="icon-facebook"></a>
-      <a [attr.href]="socialLinks[1].url" aria-label=" Instagram" target="_blank" class="icon-container"
-        ngClass="icon-instagram"></a>
-      <a [attr.href]="socialLinks[2].url" aria-label="youtube" target="_blank" class="icon-container"
-        ngClass="icon-youtube"></a>
-      <a [attr.href]="'mailto:contact@demoralizeband.gr' " aria-label="email" class="icon-container"
-        ngClass="icon-mail"></a>
-    </div>
-
+<div class="useful-links-container">
+  <div class="social-links-container">
+    <a [attr.href]="socialLinks[0].url" aria-label=" facebook" target="_blank" class="icon-container"
+      ngClass="icon-facebook"></a>
+    <a [attr.href]="socialLinks[1].url" aria-label=" Instagram" target="_blank" class="icon-container"
+      ngClass="icon-instagram"></a>
+    <a [attr.href]="socialLinks[2].url" aria-label="youtube" target="_blank" class="icon-container"
+      ngClass="icon-youtube"></a>
+    <a [attr.href]="'mailto:contact@demoralizeband.gr' " aria-label="email" class="icon-container"
+      ngClass="icon-mail"></a>
   </div>
+  <button type="button" class="media-button"><a href="https://demoralize.gr/" target='_blank'>Go to Official
+      Site</a></button>
+</div>
+<div class="main-container">
   <div class="flip-card no-mobile">
     <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -39,6 +40,7 @@
     <app-profile></app-profile>
   </div>
 </div>
+
 <!-- <div class="buttons-container-mobile">
   <button aria-label="show Favourites images" type="button" class="profile-button" style="margin-right: 16px"
     [ngStyle]="{ 'background-color': selectedColor }" *ngIf="this.profiles.length > 3" (click)="toggleNext(true)">
