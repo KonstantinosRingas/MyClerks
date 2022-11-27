@@ -23,8 +23,11 @@ export class MainPageComponent implements OnInit {
     this.rightLinks = this.links.slice(4, 8);
   }
 
-  showFavourites(): void {
+  showPickups(): void {
     this.play = true;
+  }
+  showAbout(): void {
+    this.play = false;
   }
 
 }

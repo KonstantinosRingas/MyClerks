@@ -1,50 +1,142 @@
-<div class="useful-links-container">
-  <div class="social-links-container">
-    <a [attr.href]="socialLinks[0].url" aria-label=" facebook" target="_blank" class="icon-container"
-      ngClass="icon-facebook"></a>
-    <a [attr.href]="socialLinks[1].url" aria-label=" Instagram" target="_blank" class="icon-container"
-      ngClass="icon-instagram"></a>
-    <a [attr.href]="socialLinks[2].url" aria-label="youtube" target="_blank" class="icon-container"
-      ngClass="icon-youtube"></a>
-    <a [attr.href]="'mailto:contact@demoralizeband.gr' " aria-label="email" class="icon-container"
-      ngClass="icon-mail"></a>
+<div class="useful-links-container" style="justify-content:'center'">
+  <img src="logo-atn.png" alt="Logo" width="240" height="120" style="margin:0 auto">
+  <div class="section-p">
+    <button type="button" class="transparent-button" (click)="showPickups()">
+      The pickup
+    </button>
+    <button type="button" class="transparent-button" (click)="showAbout()">
+      About us
+    </button>
   </div>
-  <div class="media-link">
-    <a href="https://demoralize.gr/" target='_blank'>Go to Official
-      Site</a>
-  </div>
-
 </div>
 <div class="main-container">
-  <div class="flip-card no-mobile">
+  <!-- <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <div class="artwork-container">
         </div>
       </div>
       <div class="flip-card-back">
-        <iframe width="580" height="580" src="https://www.youtube.com/embed/3Nxht5XkyME" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <div class="artwork-container">
+        </div>
       </div>
     </div>
-  </div>
-  <div *ngIf="!play" class="artwork-container only-mobile">
-    <button class="flex-center-play" (click)="showFavourites()"></button>
-  </div>
-  <div *ngIf="play" class="only-mobile">
-    <iframe width="240" height="240" src="https://www.youtube.com/embed/3Nxht5XkyME" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
 
-  <div class="profiles-container">
-    <app-profile></app-profile>
+
+    <div class="profiles-container">
+      <app-profile></app-profile>
+
+    </div>
+  </div> -->
+  <div *ngIf="!play" class="section-p">
+    <h2 class="header">
+      INTRODUCING THE PICKUPS OF THE FUTURE
+    </h2>
+    <p class="first-p">
+      Redefine your Bass tone and eliminate the limitations of traditional pickups with a new revolutionary design that
+      allows previously unheard of customization!</p>
+    <h2 class="header">EACH STRING NOW HAS:</h2>
+
+
+
+    <ul>
+      <li>Separate volume controls for fine tuning</li>
+      <li>Bass Boost tuned to the root frequency of the string, allowing for the deepest bass sound ever</li>
+      <li>Tremble control with different predefined settings for each string for maximum clarity</li>
+      <li>Extremely Low Noise-High Output Active Pickups</li>
+    </ul>
+    <h2 class="header">
+      MID VOLUME COMPENSATION!
+    </h2>
+    <p class="first-p">
+      <span style="font-weight: 500">ATN Pickups</span> features 2 controls for Mid frequencies:
+    </p>
+    <ul>
+      <li>Frequency Sweep, allowing the player to select from a range of 200-600Hz</li>
+      <li>4 step volume switch with Automatic Volume Compensation so that the overall volume is not affected and only
+        the Tone of the instrument is changed.</li>
+
+    </ul>
+    <h2 class="header">
+      MORE THAN 50 DIFFERENT BASS TONES!
+    </h2>
+    <p class="first-p">
+      Combine our wide range of tone control and create any type of bass tone, each with a unique quality and precision!
+    </p>
+    <h2 class="header">EASIER TO INSTALL THAN EVER </h2>
+    <p class="first-p">
+      <span style="font-weight: 500">ATN pickups</span> are prewired, designed to fit in any P or J type bass and
+      installation requires just 4 screws!
+    </p>
+  </div>
+  <div *ngIf="!play" class="flex-center">
+    <div class="main-photo"></div>
+    <div class="main-photo2"></div>
+
+  </div>
+  <div *ngIf="play" class="flex-center">
+    <div>
+      <img src="carousel1.jpg" alt="Logo" width="500" height="360" style="margin:0 auto">
+    </div>
+    <div class="section-p " style="margin-left:64px">
+      <h2 class="header">TECHNICAL SPECIFICATIONS</h2>
+      <p class="first-p">
+        Humbucker multi-coil pickup. Each coil features a different resonant and highcut frequency for every string.
+      </p>
+      <p class="first-p">
+        Each string has its own extremely low noise preamplifier with an easily accessible, independent volume trimmer.
+        The Bass Boost knob, thanks to four suitably tuned MFB filters, amplifies the ideal center frequency for every
+        string, mixing up a super powerful yet crystal-clear low end.
+      </p>
+      <p class="first-p">
+        The Parametric Middle Boost EQ, sweepable from 240 to 640 Hz, has four boost positions with the valuable
+        capability of simultaneous gain reduction. It boosts middles while keeping the output volume at the same level.
+        The whole circuit is powered from two CR123A batteries through an 5Volts ultra-low noise voltage regulator, with
+        a power consumption of 1,35 mA giving a service life of about 1000 hours. The output impedance is about 2750
+        Ohms, due to a 2,7k resistor in series with the output, mainly for protection reasons.
+      </p>
+    </div>
   </div>
 </div>
+<div class="useful-links-container useful-links-container--bottom">
+  <p class="social-p" style="width:148px">Find us on:</p>
 
-<!-- <div class="buttons-container-mobile">
+  <div class="social-links-container">
+    <div class="flex-center">
+      <a [attr.href]="socialLinks[0].url" aria-label=" facebook" target="_blank" class="icon-container"
+        ngClass="icon-facebook">
+
+      </a>
+      <p class="social-p">Facebook</p>
+    </div>
+    <div class="flex-center">
+      <a [attr.href]="socialLinks[1].url" aria-label=" Instagram" target="_blank" class="icon-container"
+        ngClass="icon-instagram">
+
+      </a>
+      <p class="social-p">Instagram</p>
+    </div>
+    <div class="flex-center">
+      <a [attr.href]="socialLinks[2].url" aria-label="youtube" target="_blank" class="icon-container"
+        ngClass="icon-youtube">
+
+      </a>
+      <p class="social-p">Youtube</p>
+    </div>
+    <div class="flex-center" style="margin-right:24px">
+      <a [attr.href]="'mailto:contact@demoralizeband.gr' " aria-label="email" class="icon-container"
+        ngClass="icon-mail">
+
+      </a>
+      <p class="social-p">Contact us via Email</p>
+    </div>
+
+  </div>
+  <div class="media-link">
+    <img src="logo-atn.png" alt="Logo" width="128" height="64">
+  </div>
+
+  <!-- <div class="buttons-container-mobile">
   <button aria-label="show Favourites images" type="button" class="profile-button" style="margin-right: 16px"
     [ngStyle]="{ 'background-color': selectedColor }" *ngIf="this.profiles.length > 3" (click)="toggleNext(true)">
     <div class="margin-left-x-small">Show Previous</div>

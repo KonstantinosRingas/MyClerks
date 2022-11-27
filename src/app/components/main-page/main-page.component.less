@@ -1,13 +1,15 @@
 .header {
-  font-size: 64px;
   font-weight: 700;
-  margin-top: 32px;
-  text-align: center;
+  color: #3d898d;
+  font-size: 24px;
+  line-height: 26px;
   margin-bottom: 16px;
-  background: linear-gradient(90deg, rgba(17, 17, 17) 0%, #222222 33%, #444444 66%, #555555 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+
+}
+
+.h1 {
+  color: #b0acb0;
+  font-size: 32px;
 
 }
 
@@ -17,7 +19,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  background-image: url(../../../../content/dragons-call.jpg);
+
 
   @media screen and (max-width: 720px) {
     width: 100%;
@@ -26,12 +28,73 @@
   }
 }
 
+
+
+.main-photo {
+  width: 50%;
+  background-image: url('../../../../content/carousel3.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 320px;
+}
+
+.main-photo2 {
+  width: 50%;
+  background-image: url('../../../../content/carousel4.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 320px;
+}
+
+.pic-ctn {
+  width: 100vw;
+  height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+
+
+
 .main-container {
-  margin-left: auto;
-  margin-right: auto;
+  font-family: Arial;
+
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+
+
   display: flex;
   flex-direction: column;
-  width: 580px;
+  width: 75%;
+  margin: 64px auto;
 
   @media screen and (max-width: 720px) {
     width: 240px;
@@ -107,13 +170,13 @@
 }
 
 .profile-button {
-  background: white;
+  background: #3d898d;
   box-shadow: 1px 1px 0 0;
   font-weight: 500;
   border-radius: 100px;
   border: 2px solid #00b0ba;
   font-size: 14px;
-  color: #00b0ba;
+  color: #b0acb0;
   padding: 2px 16px;
 
   text-align: center;
@@ -140,20 +203,7 @@
 
 }
 
-.flex-center-play {
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  background-image: url(../../../../content/play.png);
-  width: 64px;
-  height: 64px;
-  margin: auto;
-  background-size: contain;
-  border: none;
-  position: relative;
-  border-radius: 100%;
-  cursor: pointer;
-}
+
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
@@ -204,108 +254,218 @@
   transform: rotateY(180deg);
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
 .useful-links-container {
   display: flex;
   flex-direction: row;
   padding: 16px;
   width: 100%;
   align-items: center;
-  justify-content: center;
-}
 
-.useful-link {
-  border-right: 1px solid #fff;
-  margin-left: 4px;
+  background-color: #2f404d;
 
-  &:last-child {
-    border-right: none;
+  &--bottom {
+    bottom: 0;
+    position: fixed;
   }
-}
 
-.social-links-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
-  max-width: 448px;
-  width: 100%;
+  .useful-link {
+    border-right: 1px solid #fff;
+    margin-left: 4px;
 
-  .icon-container {
-    margin: 16px;
-    height: 32px;
-    width: 32px;
-
-    @media screen and (max-width: 720px) {
-      margin: 1rem 0.5rem;
+    &:last-child {
+      border-right: none;
     }
   }
-}
 
-.icon-instagram {
-  background-image: url(../../../../content/instagram.png);
-  background-size: contain;
-}
-
-.icon-facebook {
-  background-image: url(../../../../content/facebook.png);
-  background-size: contain;
-}
-
-.icon-youtube {
-  background-image: url(../../../../content/youtube.png);
-  background-size: contain;
-}
-
-.icon-mail {
-  background-image: url(../../../../content/email.png);
-  background-size: contain;
-}
-
-.no-mobile {
-  @media screen and (max-width: 720px) {
-    display: none;
+  .social-p {
+    color: #b0acb0;
+    font-size: 16px;
+    line-height: 18px;
   }
-}
 
-.only-mobile {
-  display: none;
+  .social-links-container {
+    min-width: 75%;
 
-  @media screen and (max-width: 720px) {
     display: flex;
-  }
-}
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    border-right: 2px solid #b0acb0;
+    align-items: flex-start;
 
-.media-link {
 
-  margin-left: 64px;
+    .icon-container {
+      margin: 16px;
+      height: 32px;
+      width: 32px;
 
-  /* unvisited link */
-  a:link {
-    color: white;
-
-  }
-
-  /* visited link */
-  a:visited {
-    color: white;
-
-  }
-
-  /* mouse over link */
-  a:hover {
-    color: white;
-
+      @media screen and (max-width: 720px) {
+        margin: 1rem 0.5rem;
+      }
+    }
   }
 
-  /* selected link */
-  a:active {
-    color: white;
+  .icon-instagram {
+    background-image: url(../../../../content/instagram.png);
+    background-size: contain;
+  }
+
+  .icon-facebook {
+    background-image: url(../../../../content/facebook.png);
+    background-size: contain;
+  }
+
+  .icon-youtube {
+    background-image: url(../../../../content/youtube.png);
+    background-size: contain;
+  }
+
+  .icon-mail {
+    background-image: url(../../../../content/email.png);
+    background-size: contain;
+  }
+
+  .no-mobile {
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .only-mobile {
+    display: none;
+
+    @media screen and (max-width: 720px) {
+      display: flex;
+    }
+  }
+
+  .media-link {
+
+    margin-left: auto;
+
+    /* unvisited link */
+    a:link {
+      color: white;
+
+    }
+
+    /* visited link */
+    a:visited {
+      color: white;
+
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: white;
+
+    }
+
+    /* selected link */
+    a:active {
+      color: white;
+
+    }
+
+    @media screen and (max-width: 720px) {
+      margin-left: 16px;
+      text-align: center;
+    }
+
 
   }
 
-  @media screen and (max-width: 720px) {
-    margin-left: 16px;
-    text-align: center;
+  .section-p {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  .transparent-button {
+    background-color: transparent;
+    color: #b0acb0;
+    border: none;
+    width: 128px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .first-p {
+
+    font-size: 18px;
+
+
+    color: #2f404d;
+
+  }
+
+
+
+
+
+  // .header-text {
+  //   font-weight: 700;
+  //   color: #2f404d;
+  //   font-size: 24px;
+  //   line-height: 26px;
+  //   margin-bottom: 16px;
+  // }
 }
