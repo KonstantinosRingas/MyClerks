@@ -9,7 +9,7 @@
     </button>
   </div>
 </div>
-<div class="main-container">
+<div class="main-container" tyle="flex-direction: row;">
   <!-- <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -28,7 +28,7 @@
 
     </div>
   </div> -->
-  <div *ngIf="!play" class="section-p">
+  <div *ngIf="!play" class="section-p" style="width:50%">
     <h2 class="header">
       INTRODUCING THE PICKUPS OF THE FUTURE
     </h2>
@@ -69,7 +69,7 @@
       installation requires just 4 screws!
     </p>
   </div>
-  <div *ngIf="!play" class="flex-center">
+  <div *ngIf="!play" class="flex-center" style="flex-direction:column;width:50%">
     <div class="main-photo"></div>
     <div class="main-photo2"></div>
 
